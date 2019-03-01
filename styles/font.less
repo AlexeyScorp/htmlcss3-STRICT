@@ -1,0 +1,85 @@
+@import "variables";
+@font-face {
+  src: url('../fonts/lato-bold.ttf');
+  font-family: "Lato Bold";
+}
+
+@font-face {
+  src: url('../fonts/lato-regular.ttf');
+  font-family: "Lato Regular";
+}
+
+@LatoBold: "Lato Bold", sans-serif;
+@LatoRegular: "Lato Regular", sans-serif;
+
+
+h2, h4 {
+  display: block;
+  font-family: @LatoRegular;
+  color: @color_dark;
+  margin: 0 auto 30px;
+}
+
+h1, h3, button {
+  display: block;
+  color: @color_bright;
+  margin-top: 0;
+}
+
+p, span, input {
+  font-family: @LatoRegular;
+  color: @font_gray;
+}
+
+.b_font {
+  color: @font_gray;
+}
+
+.w_font {
+  color: @color_bright;
+}
+
+h1 {
+  font-family: @LatoBold;
+  font-size: 7.5em;
+  font-weight: 700;
+  line-height: 0.78em;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 34px;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+h3 {
+  font-family: @LatoRegular;
+  font-size: 2.563em;
+  font-weight: 400;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.375em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h5 {
+  font-family: @LatoBold;
+  color: @color_dark;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 0.667;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

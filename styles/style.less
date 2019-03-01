@@ -1,0 +1,435 @@
+@import "variables";
+@import "font";
+
+.inside {
+  position: relative;
+  width: 1140px;
+  min-height: inherit;
+  margin: 0 auto;
+}
+
+.logo {
+  line-height: 27px;
+
+  h5:before{
+    content: url("../images/logo.svg");
+    margin-right: 15px;
+  }
+}
+
+.line {
+  height: 2px;
+  background: @main_blue;
+}
+
+button, input[type="submit"] {
+  .button_nav();
+  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+#main_header {
+  width: 100%;
+  min-height: 99px;
+  box-shadow:  0 0 4px 0 @color_dark;
+
+  .logo {
+    font-size: 35px;
+    display: inline-block;
+    margin-top: 30px;
+  }
+}
+
+#container {
+  width: 100%;
+  position: relative;
+
+  > div, section, article {
+    position: relative;
+  }
+
+  #welcome {
+    background: url("../images/MainBG.jpg") no-repeat bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 800px;
+
+    > .inside {
+      padding: 217px 0 91px;
+
+      .line {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      p {
+        text-align: center;
+        margin: 30px 0 60px;
+      }
+
+      .click_down {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90px;
+        text-align: center;
+
+        a {
+          display: inline-block;
+          .hover(@transparent, @color_bright, @transparent, @main_blue);
+
+          .fa-angle-down {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+
+  #design {
+    min-height: 340px;
+    background: @color_bright_white;
+
+    .inside {
+      padding-top: 81px;
+
+      p {
+        font-size: 1.25em;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: justify;
+        text-align-last: center;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #feature {
+    min-height: 340px;
+
+    .inside {
+      padding: 50px 0;
+
+      > div {
+        float: left;
+        width: 30%;
+        margin: 0 calc(10%/6);
+        padding-top: 15px;
+
+        .icon {
+          position: relative;
+          width: 100px;
+          height: 100px;
+          margin: 0 auto 30px;
+          background: @icon_bg_one;
+
+          .two_color {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: inherit;
+            background: @icon_bg_two;
+          }
+
+          i {
+            color: @color_bright;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 2;
+            height: inherit;
+            width: inherit;
+          }
+
+          .fa-3x {
+            font-size: 3.5em;
+          }
+        }
+
+        p {
+          font-size: 1em;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: center;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  #hober {
+    min-height: 900px;
+    background: @color_bright_white;
+
+    .inside {
+
+      #hober_header {
+        padding: 81px 0 15px;
+
+        p {
+          font-size: 1em;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+
+      > article {
+        margin: 0 calc(-7%/6);
+        padding: 50px 0;
+
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        > div {
+          position: relative;
+          float: left;
+          width: 31%;
+          height: 260px;
+          margin: 0 calc(7%/6) 30px;
+          background: @main_blue;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+
+          .inf_btn {
+            visibility: hidden;
+            opacity: 0;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: inherit;
+
+            button {
+              .hover(@transparent, @color_bright, @font_gray, @main_blue);
+              width: 42px;
+              height: 42px;
+              border: solid @color_bright 1px;
+              margin: 0 5px;
+              padding: 0;
+
+              i {
+                font-size: 1.7em;
+              }
+
+            }
+          }
+
+          &:hover img {
+            transform: scale(1.1);
+            opacity: 0.2;
+            transition: 1s all;
+          }
+
+          &:hover .inf_btn {
+            visibility: visible;
+            opacity: 1;
+            transition: 1s all;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    min-height: 700px;
+    background: @color_dark url("../images/ContactBG.jpg") no-repeat fixed center bottom;
+    background-size: cover;
+    overflow: hidden;
+
+    .inside {
+      background: rgba(45, 57, 80, 0.9);
+      box-shadow: 0 0 200px 200px rgba(45, 57, 80, 0.9);
+      padding-top: 75px;
+
+      h3 {
+        margin-bottom: 21px;
+      }
+
+      p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      form {
+        width: 50%;
+        padding: 15px 0;
+        margin: 50px auto;
+        font-size: 1em;
+        font-weight: 400;
+        text-align: left;
+
+        input[type="text"], input[type="email"], input[type="checkbox"], textarea {
+          border: solid 1px @font_gray;
+          border-radius: 6px;
+          background-color:  rgba(246, 249, 249, 0);
+          height: 62px;
+          outline: none;
+          box-sizing: border-box;
+          margin-bottom: 15px;
+          font-family: @LatoRegular;
+          color: @font_gray;
+          font-size: 1em;
+          font-weight: 400;
+          text-align: left;
+
+          &:focus {
+            background: fadeOut(@main_blue, 90%);
+            color: @color_bright_white;
+            border-color: @color_bright;
+          }
+
+          &:hover {
+            background: fadeOut(@main_blue, 90%);
+            transition: 1s;
+          }
+
+        }
+
+        input[type="text"], input[type="email"] {
+          width: 100%;
+          height: 62px;
+          padding: 0 15px;
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 162px;
+          max-height: 162px;
+          border: solid 1px @font_gray;
+          border-radius: 6px;
+          background-color:  rgba(246, 249, 249, 0);
+          height: 62px;
+          outline: none;
+          box-sizing: border-box;
+          margin-bottom: 15px;
+          padding: 15px;
+        }
+
+        label {
+          font-family: @LatoRegular;
+          color: @font_gray;
+          font-size: 1em;
+          font-weight: 400;
+          text-align: left;
+          margin-top: 15px;
+        }
+
+        input[type="checkbox"] {
+          height: 15px;
+          width: 15px;
+          border-color: #9aa1ab;
+          margin-top: 15px;
+        }
+
+        input[type="submit"] {
+          width: 140px;
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#main_footer {
+  min-height: 90px;
+
+  .inside {
+
+    > p {
+      display: inline-block;
+      float: left;
+      font-size: 1em;
+      font-weight: 400;
+      text-align: left;
+      margin-top: 35px;
+    }
+
+    .right_footer {
+      float: right;
+      width: 175px;
+      height: 40px;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 24px;
+
+      > a {
+        display: inline-block;
+
+        &:hover i {
+          box-shadow: inset 0 0 20px 20px fadeOut(@color_dark, 50%);
+        }
+      }
+
+      .fb_bg {
+        border-radius: 2px;
+        background-color:  #3b5998;
+        height: inherit;
+        width: 40px;
+      }
+
+      .tw_bg {
+        border-radius: 2px;
+        background-color:  #55acee;
+        height: inherit;
+        width: 40px;
+      }
+
+      .gl_bg {
+        border-radius: 2px;
+        background-color:  #dd4b39;
+        height: inherit;
+        width: 40px;
+      }
+
+      .in_bg {
+        border-radius: 2px;
+        background-color:  #0976b4;
+        height: inherit;
+        width: 40px;
+      }
+
+      i {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        height: inherit;
+        width: inherit;
+        font-size: 1.5em;
+        color: @color_bright;
+      }
+    }
+  }
+}
+
+
+
+
+
+

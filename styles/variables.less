@@ -1,0 +1,54 @@
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+
+@color_dark: #2d3950;
+@color_bright: #fff;
+@color_bright_white: #f6f9f9;
+@font_gray: #999999;
+@main_blue: #15a4fa;
+@icon_bg_one: #5fc3ff;
+@icon_bg_two: #48baff;
+@transparent: transparent;
+
+
+.button_nav() {
+  background: @main_blue;
+  color: @color_bright;
+  transition: 1s;
+  font-family: @LatoRegular;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 2.611;
+  text-align: center;
+
+  &:hover {
+    background: @icon_bg_one;
+    color: @color_bright_white;
+    box-shadow: 0 0 5px @main_blue;
+    text-shadow: 0 0 5px @color_bright_white;
+    cursor: pointer;
+  }
+}
+
+.hover(@bg_main, @color_main, @bg_hover, @color_hover) {
+  background: @bg_main;
+  color: @color_main;
+  transition: 1s;
+
+  &:hover {
+    background: @bg_hover;
+    color: @color_hover;
+    box-shadow: 0 0 5px @bg_main;
+    text-shadow: 0 0 5px @color_main;
+    cursor: pointer;
+  }
+}
+
+
